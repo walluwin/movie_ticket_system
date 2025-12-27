@@ -1,23 +1,16 @@
-public class Viewer {
-    private String name;
-    private int age;
+public class Viewer extends CinemaUser {
 
     public Viewer(String name, int age) {
-        this.name = name;
-        this.age = age;
+        super(name, age);
     }
 
-    public String getName() {
-        return this.name;
-    }
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public String getRole() {
+        return "Viewer";
     }
 
-    public int getAge() {
-        return this.age;
-    }
-    public void setAge(int age) {
-        this.age = age;
+    @Override
+    public String toString() {
+        return "Viewer name='" + getName() + "', age=" + getAge() + " ";
     }
 }
